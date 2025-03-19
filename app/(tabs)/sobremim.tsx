@@ -36,22 +36,11 @@ export default function sobremim() {
             </View>
 
             <View style={styles.boxFaq}>
-                <Text style={styles.faqTitle}>Como utilizar a ferramenta "Pace Estimado"?</Text>
-                <Text style={styles.faqText}>R: Digite a distância corretamente, se for KM digite : 5 ou 10 ou 12, se for em METROS digite : 0,400 ou 0,200 ou 1,500. Não deixe nenhum campo vazio, caso necessário coloque 0 no campo.</Text>
+                <Text style={styles.faqTitle}>Como copiar o resultado do cálculo?</Text>
+                <Text style={styles.faqText}>R: Basta tocar em cima do resultado calculado, automaticamente será copiado.</Text>
 
             </View>
-
-            <View style={styles.boxFaq}>
-                <Text style={styles.faqTitle}>Como utilizar a ferramenta "Pace Estimado"?</Text>
-                <Text style={styles.faqText}>R: Digite a distância corretamente, se for KM digite : 5 ou 10 ou 12, se for em METROS digite : 0,400 ou 0,200 ou 1,500. Não deixe nenhum campo vazio, caso necessário coloque 0 no campo.</Text>
-
-            </View>
-
-            <View style={styles.boxFaq}>
-                <Text style={styles.faqTitle}>Como utilizar a ferramenta "Pace Estimado"?</Text>
-                <Text style={styles.faqText}>R: Digite a distância corretamente, se for KM digite : 5 ou 10 ou 12, se for em METROS digite : 0,400 ou 0,200 ou 1,500. Não deixe nenhum campo vazio, caso necessário coloque 0 no campo.</Text>
-
-            </View>
+            
         </View>
         </ScrollView>
         </SafeAreaView>
