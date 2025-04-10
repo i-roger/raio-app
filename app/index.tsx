@@ -1,15 +1,34 @@
 import { Text, View, StyleSheet, TouchableHighlight, TouchableOpacity, StatusBar } from "react-native";
-import { Link } from 'expo-router';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView } from "react-native";
 import React from "react";
+import { router } from "expo-router";
+
+import MenuOptions from "../components/menuOption"
 
 export default function Index() {
+
+  function paceEstimado () {
+    router.navigate("/paceestimado")
+  }
+
+  function paceParaKmh () {
+    router.navigate("/paceparakmh")
+  }
+
+  function novo () {
+    router.navigate("/novo")
+  }
+
+  function sobre() {
+    router.navigate("/sobremim")
+  }
+
   return (
     <SafeAreaView style={{flex:1, backgroundColor: '#25292e'}}>
-      <StatusBar barStyle={"light-content"}/>
+      
       <ScrollView style={{backgroundColor: '#25292e'}}>
-        <View style={{paddingTop: 20, paddingBottom: 100}}> 
+        <View style={{paddingTop: 20, paddingBottom: 100, backgroundColor: '#25292e'}}> 
 
           <View 
             style={{
@@ -22,20 +41,24 @@ export default function Index() {
             <Text style={{textAlign:'center', color:'#e9e9ea', fontSize:24}}>Seu companheiro nas corridas!</Text>
           </View>
           
-          <View style={{flex:1, flexDirection:'row', justifyContent:'center', gap:50, flexWrap:'wrap'}}>
+          <View style={{flex:1, backgroundColor: 'orange', width: '100%', height: '100%', flexDirection:'row', justifyContent:'center', gap:50, flexWrap:'wrap'}}>
 
-          <Link href="/paceestimado" asChild>
-            <TouchableHighlight style={styles.button} underlayColor='#d79732'>
+            <TouchableHighlight onPress={paceEstimado} style={styles.button} underlayColor='#d79732'>
               <Text style={styles.buttonText}>Pace Estimado</Text>
             </TouchableHighlight>
-          </Link>
 
 
-          <Link href="/paceparakmh" asChild>
-            <TouchableHighlight style={styles.button} underlayColor='#d79732'>
+            <TouchableHighlight onPress={paceParaKmh} style={styles.button} underlayColor='#d79732'>
                 <Text style={styles.buttonText}>Pace para km/h</Text>
             </TouchableHighlight>
-          </Link>
+
+            <TouchableHighlight onPress={novo} style={styles.button} underlayColor='#d79732'>
+                <Text style={styles.buttonText}>Teste Animação</Text>
+            </TouchableHighlight>
+
+            <TouchableHighlight onPress={sobre} style={styles.button} underlayColor='#d79732'>
+                <Text style={styles.buttonText}>Sobre</Text>
+            </TouchableHighlight>
 
           </View>
 
@@ -48,11 +71,12 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 32,
     justifyContent: "center",
-    alignItems: "center",
   },
   button: {
-    height: 80,
+    width: 150,
+    height: 100,
     alignItems: 'center',
     backgroundColor: '#ce7e00',
     padding: 10,

@@ -5,6 +5,8 @@ import { ScrollView } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
+import Header from '../components/header'
+
 const PaceToSpeed: React.FC = () => {
   const [pace, setPace] = useState<string>('');
   const [speed, setSpeed] = useState<string | null>(null);
@@ -56,6 +58,7 @@ const PaceToSpeed: React.FC = () => {
     <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           style={styles.container}>
+
     <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps='handled'>
       
     <View style={styles.inputContainer}>

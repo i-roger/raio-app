@@ -7,21 +7,21 @@ export default function sobremim() {
     return(
         
         <SafeAreaView style={{backgroundColor: '#25292e'}}>
-            <View style={{position:'absolute', top:0, zIndex:1, width: '100%', paddingTop:50, paddingBottom: 20, justifyContent: 'space-evenly', flexDirection: 'row', alignItems: "center", backgroundColor: '#d79732', shadowOpacity: 0.2, shadowOffset: {width:10, height:10}, shadowRadius: 3, borderEndStartRadius: 50, borderEndEndRadius: 50}}>
-                <TouchableOpacity onPress={() => Linking.openURL('https://www.instagram.com/raiolaranja/')}>
+            <View style={{alignItems: 'center', margin: 10,}}>
+                <TouchableOpacity style={{width: '100%', paddingTop:20, paddingBottom: 20, justifyContent: 'space-evenly', flexDirection: 'row', alignItems: "center", backgroundColor: '#d79732', shadowOpacity: 0.2, shadowOffset: {width:10, height:10}, shadowRadius: 3, borderRadius: 10}} onPress={() => Linking.openURL('https://www.instagram.com/raiolaranja/')}>
                     <View style={{justifyContent: 'space-evenly', flexDirection: 'row', alignItems: "center", width:'100%', gap:4,}}>
                         <Image 
                         style={styles.myimg}
                         source={require('@/assets/images/raiolaranja.png')}/>
 
-                        <View style={{width:245}}>
-                            <Text style={{fontSize: 20, color:'#000'}}>Você também pode falar comigo diretamente, basta clicar aqui!</Text>
+                        <View style={{width:'50%'}}>
+                            <Text style={{fontSize: 17, color:'#000'}}>Você também pode falar comigo diretamente, basta clicar aqui!</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
             </View>
 
-            <View style={{margin: 10, paddingTop: 170}}>
+            <View style={{margin: 10}}>
                 <Text style={styles.title}>
                     FAQ:
                 </Text>
@@ -49,9 +49,9 @@ export default function sobremim() {
 
 const styles = StyleSheet.create ({
     myimg: {
-        borderRadius: '100%',
-        width: 125,
-        height: 125
+        borderRadius: 100,
+        width: 105,
+        height: 105
     },
     boxFaq: {
         backgroundColor: '#d79732',
